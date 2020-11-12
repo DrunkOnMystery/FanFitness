@@ -1,7 +1,13 @@
 import React, { Component } from "react";
+import { Switch, Route } from "react-router-dom";
 // import Foundation from "react-foundation";
 import "./App.css";
-import Nav from "../components/Nav"
+import Nav from "../components/Nav";
+import NotFound from "../pages/NotFound";
+import User from "../pages/User";
+import WorkoutBuilder from "../pages/WorkoutBuilder";
+import ViewGames from "../pages/ViewGames";
+import Home from "../pages/Home";
 
 class App extends Component {
   render() {
