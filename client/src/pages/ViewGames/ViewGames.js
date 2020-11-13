@@ -3,7 +3,11 @@ import { Container } from "../../components/Grid";
 
 function ViewGames() {
     return (
-        <Container />
+        <Container>
+        <Cell>
+            <h1>This is the "View Games" Page</h1>
+        </Cell>
+    </Container>
     )
 }
 

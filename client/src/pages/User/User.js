@@ -3,7 +3,11 @@ import { Container } from "../../components/Grid";
 
 function User() {
     return (
-        <Container />
+        <Container>
+        <Cell>
+            <h1>This is the User Page</h1>
+        </Cell>
+    </Container>
     )
 }
 

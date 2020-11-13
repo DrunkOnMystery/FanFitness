@@ -1,9 +1,13 @@
 import React from "react";
-import { Container } from "../../components/Grid";
+import { Container, Cell } from "../../components/Grid";
 
 function Home() {
     return (
-        <Container />
+        <Container>
+            <Cell>
+                <h1>This is the Home Page</h1>
+            </Cell>
+        </Container>
     )
 }
 

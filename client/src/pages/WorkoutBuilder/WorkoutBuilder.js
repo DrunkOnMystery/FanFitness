@@ -3,7 +3,11 @@ import { Container } from "../../components/Grid";
 
 function WorkoutBuilder() {
     return (
-        <Container />
+        <Container>
+        <Cell>
+            
+        </Cell>
+    </Container>
     )
 }
 
