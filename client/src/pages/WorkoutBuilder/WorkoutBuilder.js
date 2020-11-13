@@ -1,5 +1,5 @@
 import React from "react";
-import { Container } from "../../components/Grid";
+import { Container, Cell } from "../../components/Grid";
 
 function WorkoutBuilder() {
     return (
