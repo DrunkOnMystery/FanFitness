@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { Switch, Route } from "react-router-dom";
-// import Foundation from "react-foundation";
 import "./App.css";
 import Nav from "../components/Nav";
 import NotFound from "../pages/NotFound";
