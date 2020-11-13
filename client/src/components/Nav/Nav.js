@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 
 function Nav() {
   return (
@@ -9,13 +8,12 @@ function Nav() {
           <li class="name">
             <h1><a href ="/">Fan Fitness</a></h1>
           </li>
-          <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
         </ul>
-
         <section class="top-bar-section">
           <ul class="left">
-            <li><a href="/user">View Games</a></li>
-            <li><a href="/user">Workout Builder</a></li>
+            <li><a href="/user">User</a></li>
+            <li><a href="/games">View Games</a></li>
+            <li><a href="/workoutbuilder">Workout Builder</a></li>
           </ul>
         </section>
       </nav>
