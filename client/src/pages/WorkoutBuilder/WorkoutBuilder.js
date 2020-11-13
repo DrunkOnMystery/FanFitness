@@ -5,7 +5,7 @@ function WorkoutBuilder() {
     return (
         <Container>
         <Cell>
-            
+            <h1>This is the Workout Builder</h1>
         </Cell>
     </Container>
     )
