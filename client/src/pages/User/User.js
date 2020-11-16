@@ -1,13 +1,11 @@
 import React from "react";
-import { Container, Cell } from "../../components/Grid";
+import Body_User from "../../components/Body_User";
 
 function User() {
     return (
-        <Container>
-        <Cell>
-            <h1>This is the User Page</h1>
-        </Cell>
-    </Container>
+        <div>
+        <Body_User />
+        </div>
     )
 }
 

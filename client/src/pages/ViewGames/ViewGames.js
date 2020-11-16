@@ -1,13 +1,11 @@
 import React from "react";
-import { Container, Cell } from "../../components/Grid";
+import Body_ViewGames from "../../components/Body_ViewGames";
 
 function ViewGames() {
     return (
-        <Container>
-        <Cell>
-            <h1>This is the "View Games" Page</h1>
-        </Cell>
-    </Container>
+        <div>
+            <Body_ViewGames />
+        </div>
     )
 }
 

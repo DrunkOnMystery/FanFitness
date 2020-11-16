@@ -1,13 +1,11 @@
 import React from "react";
-import { Container, Cell } from "../../components/Grid";
+import Body_NotFound from "../../components/Body_NotFound";
 
 function NotFound() {
     return (
-        <Container>
-            <Cell>
-                <h1>PAGE NOT FOUND</h1>
-            </Cell>
-        </Container>
+        <div>
+        <Body_NotFound />
+        </div>
     )
 }
 

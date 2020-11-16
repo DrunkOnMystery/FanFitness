@@ -1,13 +1,11 @@
 import React from "react";
-import { Container, Cell } from "../../components/Grid";
+import Body_WorkoutBuilder from "../../components/Body_WorkoutBuilder";
 
 function WorkoutBuilder() {
     return (
-        <Container>
-        <Cell>
-            <h1>This is the Workout Builder</h1>
-        </Cell>
-    </Container>
+        <div>
+        <Body_WorkoutBuilder />
+        </div>
     )
 }
 
