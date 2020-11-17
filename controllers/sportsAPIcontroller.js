@@ -6,10 +6,10 @@ fetch(mlbTeamApiUrl)
     .then(response => response.json())
     .then(data => console.log(data));
 
-const mlbApiURL = "https://api.sportsdata.io/v3/mlb/scores/json/TeamGameStatsByDate/%7Bdate%7D?key=49f703424dd5440ab0bf8de43e4f7c40";
-fetch(mlbApiURL)
-    .then(response => response.json())
-    .then(data => console.log(data));
+// const mlbApiURL = "https://api.sportsdata.io/v3/mlb/scores/json/TeamGameStatsByDate/%7Bdate%7D?key=49f703424dd5440ab0bf8de43e4f7c40";
+// fetch(mlbApiURL)
+//     .then(response => response.json())
+//     .then(data => console.log(data));
 
 module.exports = {
     findAll: function (req, res) {

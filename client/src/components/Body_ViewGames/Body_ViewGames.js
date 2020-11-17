@@ -31,11 +31,22 @@ function Body_ViewGames() {
                             </div>
                             <div class="cell medium-8 medium-cell-block-y">
                                 <h5>Workout Display For The Game You Clicked</h5>
-                                <p>Games will appear here</p>
-                                <p>Games will appear here</p>
-                                <p>Games will appear here</p>
-                                <p>Games will appear here</p>
-                                <p>Games will appear here</p>
+                                <p id="Game1">Games will appear here</p>
+                                <p id="Game2">Games will appear here</p>
+                                <p id="Game3">Games will appear here</p>
+                                <p id="Game4">Games will appear here</p>
+                                <p id="Game5">Games will appear here</p>
+                                <p id="Game6">Games will appear here</p>
+                                <p id="Game7">Games will appear here</p>
+                                <p id="Game8">Games will appear here</p>
+                                <p id="Game9">Games will appear here</p>
+                                <p id="Game10">Games will appear here</p>
+                                <p id="Game11">Games will appear here</p>
+                                <p id="Game12">Games will appear here</p>
+                                <p id="Game13">Games will appear here</p>
+                                <p id="Game14">Games will appear here</p>
+                                <p id="Game15">Games will appear here</p>
+
                             </div>
                         </div>
                     </div>
