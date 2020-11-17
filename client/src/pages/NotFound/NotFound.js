@@ -1,11 +1,14 @@
 import React from "react";
-import Body_NotFound from "../../components/Body_NotFound";
+import "./style.css";
+import { Container, Cell } from "../../components/Grid";
 
 function NotFound() {
     return (
-        <div>
-        <Body_NotFound />
-        </div>
+        <Container>
+            <Cell>
+            <h5>404 DATA NOT FOUND</h5>
+            </Cell>
+        </Container>
     )
 }
 

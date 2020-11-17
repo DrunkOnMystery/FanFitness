@@ -1,10 +1,10 @@
 const mongoose = require("mongoose");
 const db = require("../models");
 
-// mongoose.connect(
-//     process.env.MONGODB_URI ||
-//     "mongodb://localhost/reactreadinglist"
-//   );
+mongoose.connect(
+    process.env.MONGODB_URI ||
+    "mongodb://localhost/exercises"
+  );
   
   const exerciseSeed = [
     {
@@ -30,3 +30,14 @@ const db = require("../models");
     }
   ];
   
+  db.Exercise
+    .remove({})
+    .then(() => db.Exercise.collection.insertMany(exerciseSeed))
+    .then(data => {
+      console.log(data.results + " records inserted!");
+      process.exit(0);
+    })
+    .catch(err => {
+      console.error(err);
+      process.exit(1);
+    });
