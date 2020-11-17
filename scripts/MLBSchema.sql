@@ -1,5 +1,5 @@
-REATE DATABASE IF NOT EXISTS mlbgames_db;
-USE mlbgames_db;
+CREATE DATABASE IF NOT EXISTS fanfitness_db;
+USE fanfitness_db;
 DROP TABLE IF EXISTS Games;
 CREATE TABLE Games (
     gameid int NOT NULL
@@ -44,5 +44,13 @@ CREATE TABLE Users (
     email varchar(255) NOT NULL,
     password varchar(255) NOT NULL,
     createdAt TIMESTAMP NOT NULL,
+    PRIMARY KEY (id)
+);
+
+DROP TABLE IF EXISTS Exercises;
+CREATE TABLE Exercises (
+    id int AUTO_INCREMENT NOT NULL,
+    exercise varchar(255) NOT NULL,
+    description TEXT,
     PRIMARY KEY (id)
 );

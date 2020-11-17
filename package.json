@@ -21,10 +21,13 @@
   },
   "dependencies": {
     "express": "^4.16.3",
+    "fs": "0.0.1-security",
     "if-env": "^1.0.4",
     "mongoose": "^5.10.14",
+    "path": "^0.12.7",
     "react": "^17.0.1",
     "react-foundation": "^0.9.6",
-    "react-router-dom": "^5.2.0"
+    "react-router-dom": "^5.2.0",
+    "sequelize": "^6.3.5"
   }
 }
