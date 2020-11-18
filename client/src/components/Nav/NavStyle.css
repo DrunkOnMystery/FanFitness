@@ -1,0 +1,27 @@
+.navlink {
+    background-color: #002d72;
+}
+
+.links {
+    color: white;
+    background-color: transparent;
+}
+
+.right {
+    background-color: #002d72
+}
+
+.top-bar {
+    background-color: #002d72
+}
+
+.top-bar-section {
+    background-color: #002d72
+}
+
+#headerText {
+    color: #D50032;
+    text-align: center;
+    font-family: "Modak", cursive;
+    font-size: 80px;
+}

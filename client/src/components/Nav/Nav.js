@@ -1,16 +1,17 @@
 import React from "react";
+import "./NavStyle.css";
 
 function Nav() {
   return (
     <div className="Nav">
       <nav class="top-bar" data-topbar role="navigation">
-            <h1 id="headerText"><a href ="/">Fan Fitness</a></h1>
+      <a href ="/"><h1 id="headerText">FAN FITNESS</h1></a>
         <section class="top-bar-section">
-          <ul class="left">
-            <li><a href="/">Home</a></li>
-            <li><a href="/user">User</a></li>
-            <li><a href="/games">View Games</a></li>
-            <li><a href="/workoutbuilder">Workout Builder</a></li>
+          <ul class="right">
+            <li class="navlink"><a class="links" href="/">Home</a></li>
+            <li class="navlink"><a class="links" href="/user">User</a></li>
+            <li class="navlink"><a class="links" href="/games">View Games</a></li>
+            <li class="navlink"><a class="links" href="/workoutbuilder">Workout Builder</a></li>
           </ul>
         </section>
       </nav>
