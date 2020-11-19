@@ -56,15 +56,17 @@ function WorkoutBuilder() {
         <Container>
             <div id="workoutContainer">
                 <Cell>
-                <div class="cell medium-6">
-                    <h5 id="workoutPageTitle">Workout Builder Page</h5>
+                    <div class="cell medium-6">
+                        <h5 id="workoutPageTitle">Workout Builder Page</h5>
                     </div>
                 </Cell>
                 <Cell>
                     <div class="grid-y medium-grid-frame">
                         <div class="cell shrink header medium-cell-block-container">
                             <div class="grid-x grid-padding-x">
-                                <div class="cell medium-12">
+                            <div class="cell medium-3">
+                                </div>
+                                <div class="cell medium-6">
                                     <form id="inputForm">
                                         <Input
                                             onChange={handleInputChange}
@@ -79,18 +81,21 @@ function WorkoutBuilder() {
                                             value={formObject.defaultCount}
                                         />
                                         <TextArea
+
                                             onChange={handleInputChange}
                                             name="description"
                                             placeholder="Describe the exercise (Optional)"
                                             value={formObject.description}
                                         />
                                         <FormBtn
-                                            
+
                                             disabled={!(formObject.exercise && formObject.defaultCount)}
                                             onClick={handleFormSubmit}>
                                             Submit Exercise
-                                </FormBtn>
+                                        </FormBtn>
                                     </form>
+                                </div>
+                                <div class="cell medium-3">
                                 </div>
                             </div>
                         </div>
@@ -103,21 +108,33 @@ function WorkoutBuilder() {
                                     <p>Exercises for your custom workout will display here.</p>
                                     <List>
                                         <ListItem>
-                                            Exercise One.
-                                    </ListItem>
+                                            User Choice Exercise One.
+                                        </ListItem>
+                                        <br/>
                                         <ListItem>
-                                            Exercise Two.
-                                    </ListItem>
+                                        User Choice Exercise Two.
+                                        </ListItem>
+                                        <br/>
                                         <ListItem>
-                                            Exercise Three.
-                                    </ListItem>
+                                        User Choice Exercise Three.
+                                        </ListItem>
+                                        <br/>
                                         <ListItem>
-                                            Exercise Four.
-                                    </ListItem>
+                                        User Choice Exercise Four.
+                                        </ListItem>
+                                        <br/>
+                                        <ListItem>
+                                        User Choice Exercise Five.
+                                        </ListItem>
+                                        <br/>
+                                        <ListItem>
+                                        User Choice Exercise Six.
+                                        </ListItem>
+                                        <br/>
                                     </List>
                                 </div>
-                                <div class="cell medium-3 medium-cell-block-y"></div>
-                                <div id="recentWorkouts" class="cell medium-5 medium-cell-block-y">
+                                <div class="cell medium-4 medium-cell-block-y"></div>
+                                <div id="recentWorkouts" class="cell medium-4 medium-cell-block-y">
                                     <h5>Workout Requirements For Your Most Recent Game(gameID here)</h5>
                                     <p className="exercise" id="Exercise1">Runs<h7> multiplied by Reps for your exercise choice</h7></p>
                                     <p className="exercise" id="Exercise2">Singles<h7> multiplied by Reps for your exercise choice</h7></p>

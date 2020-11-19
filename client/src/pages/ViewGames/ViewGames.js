@@ -3,6 +3,7 @@ import "./style.css"
 import { Container, Cell } from "../../components/Grid";
 
 function ViewGames() {
+    
     return (
         <Container>
             <div id="vgContainer">
@@ -26,8 +27,8 @@ function ViewGames() {
                         <div className="cell medium-auto medium-cell-block-container">
                             <div className="grid-x grid-padding-x">
                                 <div id="left-column" className="cell medium-4 medium-cell-block-y">
-                                    <h5>Yesterday's Stats</h5>
-                                    <p>Clickable links for the stats from yesterday's games will display in this column</p>
+                                    <h5>Search Team Stats By Date</h5>
+                                    <p>Clickable links for the stats from that day's games will display in this column</p>
 
                                     <p>Might mess around and make the exercise numbers display here automatically as well. Maybe with default exercise values?</p>
 

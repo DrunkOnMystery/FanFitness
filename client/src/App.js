@@ -17,13 +17,14 @@ class App extends Component {
     const apiURL = "https://api.sportsdata.io/v3/mlb/scores/json/TeamGameStatsByDate/2020-Aug-17?key=49f703424dd5440ab0bf8de43e4f7c40"
     fetch(apiURL)
       .then(response => response.json())
-      .then(data => console.log("This is the data", data));
-
-    const mlbTeamApiUrl = "https://api.sportsdata.io/v3/mlb/scores/json/teams?key=49f703424dd5440ab0bf8de43e4f7c40";
-    fetch(mlbTeamApiUrl)
-      .then(response => response.json())
-      .then(data => console.log(data));
-  }
+      .then(function(data) {
+        for (let i=0; i<data.length; i++) {
+          console.log("This team is the " + data[i].Name);
+        }
+    
+      // .then(data => console.log("New console log " + data[0]));
+  })
+}
 
   render() {
     return (
