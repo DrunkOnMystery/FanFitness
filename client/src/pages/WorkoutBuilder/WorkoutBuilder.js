@@ -116,24 +116,36 @@ function WorkoutBuilder() {
                                     </ListItem>
                                     </List>
                                 </div>
-                                <div class="cell medium-4 medium-cell-block-y"></div>
-                                <div id="recentWorkouts" class="cell medium-4 medium-cell-block-y">
-                                    <h5>Workout Requirements For Your Most Recent Game</h5>
-                                    <p id="Game1">Games workouts will appear here</p>
-                                    <p id="Game2">Games workouts will appear here</p>
-                                    <p id="Game3">Games workouts will appear here</p>
-                                    <p id="Game4">Games workouts will appear here</p>
-                                    <p id="Game5">Games workouts will appear here</p>
-                                    <p id="Game6">Games workouts will appear here</p>
-                                    <p id="Game7">Games workouts will appear here</p>
-                                    <p id="Game8">Games workouts will appear here</p>
-                                    <p id="Game9">Games workouts will appear here</p>
-                                    <p id="Game10">Games workouts will appear here</p>
-                                    <p id="Game11">Games workouts will appear here</p>
-                                    <p id="Game12">Games workouts will appear here</p>
-                                    <p id="Game13">Games workouts will appear here</p>
-                                    <p id="Game14">Games workouts will appear here</p>
-                                    <p id="Game15">Games workouts will appear here</p>
+                                <div class="cell medium-3 medium-cell-block-y"></div>
+                                <div id="recentWorkouts" class="cell medium-5 medium-cell-block-y">
+                                    <h5>Workout Requirements For Your Most Recent Game(gameID here)</h5>
+                                    <p className="exercise" id="Exercise1">Runs<h7> multiplied by Reps for your exercise choice</h7></p>
+                                    <p className="exercise" id="Exercise2">Singles<h7> multiplied by Reps for your exercise choice</h7></p>
+                                    <p className="exercise" id="Exercise3">Doubles<h7> multiplied by Reps for your exercise choice</h7></p>
+                                    <p className="exercise" id="Exercise4">Triples<h7> multiplied by Reps for your exercise choice</h7></p>
+                                    <p className="exercise" id="Exercise5">Homeruns<h7> multiplied by Reps for your exercise choice</h7></p>
+                                    <p className="exercise" id="Exercise6">Strikeouts<h7> multiplied by Reps for your exercise choice</h7></p>
+                                    <p className="exercise" id="Exercise7">Popouts<h7> multiplied by Reps for your exercise choice</h7></p>
+                                    <p className="exercise" id="Exercise8">Flyouts<h7> multiplied by Reps for your exercise choice</h7></p>
+                                    <p className="exercise" id="Exercise9">Groundouts<h7> multiplied by Reps for your exercise choice</h7></p>
+                                    <p className="exercise" id="Exercise10">Steals<h7> multiplied by Reps for your exercise choice</h7></p>
+                                    <p className="exercise" id="Exercise11">Walks<h7> multiplied by Reps for your exercise choice</h7></p>
+                                    <p className="exercise" id="Exercise12">Doubleplays<h7> multiplied by Reps for your exercise choice</h7></p>
+                                    <p className="exercise" id="Exercise13">Tripleplays<h7> multiplied by Reps for your exercise choice</h7></p>
+                                    <p className="exercise" id="Exercise14">Opp Singles<h7> multiplied by Reps for your exercise choice</h7></p>
+                                    <p className="exercise" id="Exercise15">Opp Doubles<h7> multiplied by Reps for your exercise choice</h7></p>
+                                    <p className="exercise" id="Exercise16">Opp Triples<h7> multiplied by Reps for your exercise choice</h7></p>
+                                    <p className="exercise" id="Exercise17">Opp Homeruns<h7> multiplied by Reps for your exercise choice</h7></p>
+                                    <p className="exercise" id="Exercise18">Opp Walks<h7> multiplied by Reps for your exercise choice</h7></p>
+                                    <p className="exercise" id="Exercise19">Opp Hit By Pitch<h7> multiplied by Reps for your exercise choice</h7></p>
+                                    <p className="exercise" id="Exercise20">Opp Steals<h7> multiplied by Reps for your exercise choice</h7></p>
+                                    <p className="exercise" id="Exercise21">Opp Flyouts<h7> multiplied by Reps for your exercise choice</h7></p>
+                                    <p className="exercise" id="Exercise22">Opp Groundouts<h7> multiplied by Reps for your exercise choice</h7></p>
+                                    <p className="exercise" id="Exercise23">Opp Lineouts<h7> multiplied by Reps for your exercise choice</h7></p>
+                                    <p className="exercise" id="Exercise24">Opp Popouts<h7> multiplied by Reps for your exercise choice</h7></p>
+                                    <p className="exercise" id="Exercise25">Opp Strikeouts<h7> multiplied by Reps for your exercise choice</h7></p>
+                                    <p className="exercise" id="Exercise26">Opp Doubleplays<h7> multiplied by Reps for your exercise choice</h7></p>
+                                    <p className="exercise" id="Exercise27">Opp Tripleplays<h7> multiplied by Reps for your exercise choice</h7></p>
 
                                 </div>
                             </div>

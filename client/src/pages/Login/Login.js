@@ -13,9 +13,9 @@ function Login() {
                         <div className="sign-in-form">
                             <h4 className="text-center">Login</h4>
                             <label for="sign-in-form-username">Username</label>
-                            <input type="text" className="sign-in-form-username" id="sign-in-form-username"></input> />
+                            <input type="text" className="sign-in-form-username" id="sign-in-form-username"></input>
                             <label for="sign-in-form-password">Password</label>
-                            <input type="text" className="sign-in-form-password" id="sign-in-form-password"></input> />
+                            <input type="text" className="sign-in-form-password" id="sign-in-form-password"></input>
                             <button type="submit" className="sign-in-form-button">Sign In</button>
                             <br/>
                             <br/>
