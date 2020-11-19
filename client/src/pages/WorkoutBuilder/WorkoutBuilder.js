@@ -56,14 +56,16 @@ function WorkoutBuilder() {
         <Container>
             <div id="workoutContainer">
                 <Cell>
-                    <h5>Workout Builder Page</h5>
+                <div class="cell medium-6">
+                    <h5 id="workoutPageTitle">Workout Builder Page</h5>
+                    </div>
                 </Cell>
                 <Cell>
                     <div class="grid-y medium-grid-frame">
                         <div class="cell shrink header medium-cell-block-container">
                             <div class="grid-x grid-padding-x">
                                 <div class="cell medium-12">
-                                    <form>
+                                    <form id="inputForm">
                                         <Input
                                             onChange={handleInputChange}
                                             name="exercise"
@@ -94,7 +96,7 @@ function WorkoutBuilder() {
                         </div>
                         <div class="cell medium-auto medium-cell-block-container">
                             <div class="grid-x grid-padding-x">
-                                <div class="cell medium-4 medium-cell-block-y">
+                                <div id="yourWorkouts" class="cell medium-4 medium-cell-block-y">
                                     <h5>Your Workouts</h5>
                                     <p>Add exercises to create your own workout here.</p>
 
@@ -113,9 +115,9 @@ function WorkoutBuilder() {
                                             Exercise Four.
                                     </ListItem>
                                     </List>
-
                                 </div>
-                                <div class="cell medium-8 medium-cell-block-y">
+                                <div class="cell medium-4 medium-cell-block-y"></div>
+                                <div id="recentWorkouts" class="cell medium-4 medium-cell-block-y">
                                     <h5>Workout Requirements For Your Most Recent Game</h5>
                                     <p id="Game1">Games workouts will appear here</p>
                                     <p id="Game2">Games workouts will appear here</p>

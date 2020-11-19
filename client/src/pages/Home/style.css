@@ -9,11 +9,14 @@
     background-position: center center;
     height: 1500px;
     font-weight: bold;
-    color: white;
+    color: white
 
 }
 
-h1 {
-    color: white;
-    font-weight: bold;
+#welcome {
+   background-color: black;
+   opacity: .55;
+   color: white; 
+   text-align: center;
+   font-weight: bolder;
 }

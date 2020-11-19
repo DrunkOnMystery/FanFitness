@@ -4,14 +4,15 @@ import "./NavStyle.css";
 function Nav() {
   return (
     <div className="Nav">
-      <nav class="top-bar" data-topbar role="navigation">
+      <nav className="top-bar" data-topbar role="navigation">
       <a href ="/"><h1 id="headerText">FAN FITNESS</h1></a>
-        <section class="top-bar-section">
-          <ul class="right">
-            <li class="navlink"><a class="links" href="/">Home</a></li>
-            <li class="navlink"><a class="links" href="/user">User</a></li>
-            <li class="navlink"><a class="links" href="/games">View Games</a></li>
-            <li class="navlink"><a class="links" href="/workoutbuilder">Workout Builder</a></li>
+        <section className="top-bar-section">
+          <ul className="right">
+            <li className="navlink"><a className="links" href="/">Home</a></li>
+            <li className="navlink"><a className="links" href="/login">Signup/Login</a></li>
+            <li className="navlink"><a className="links" href="/user">User</a></li>
+            <li className="navlink"><a className="links" href="/games">View Games</a></li>
+            <li className="navlink"><a className="links" href="/workoutbuilder">Workout Builder</a></li>
           </ul>
         </section>
       </nav>

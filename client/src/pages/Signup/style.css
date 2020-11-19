@@ -1,0 +1,74 @@
+
+.sign-up-form {
+    padding: 1rem 1.5em;
+    border-radius: .5rem;
+    background-color: #3d454f;
+    width: 40%;
+  }
+  
+  .sign-up-form h4 {
+    color: white;
+    margin-bottom: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+  
+  .sign-up-form label {
+    text-transform: uppercase;
+    color: white;
+    letter-spacing: 1px;
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+  
+  .sign-up-form input {
+    color: white;
+  }
+  
+  .sign-up-form input:focus {
+    opacity: .8;
+  }
+  
+  .sign-up-form-username,
+  .sign-up-form-password {
+    border-radius: 30px;
+    border: none;
+    opacity: .1;
+    transition: all ease .4s;
+  }
+  
+  .sign-up-form-button {
+    border-radius: 30px;
+    border: 1px solid #fff;
+    color: #fff;
+    background-color: transparent;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    width: 100%;
+    padding: 1rem;
+    transition: all ease .4s;
+  }
+  
+  .sign-up-form-button:hover {
+    background-color: white;
+    border-color: white;
+  }
+
+  #signup-center {
+      margin-top: 10%;
+      text-align: center;
+      justify-content: center;
+      margin-left: 30%;
+      margin-right: 30%;
+  }
+  
+  #signupContainer {
+    background: url("./image/tycobb.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 1500px;
+    font-weight: bold;
+    color: white
+
+}

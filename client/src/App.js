@@ -7,6 +7,8 @@ import User from "./pages/User";
 import WorkoutBuilder from "./pages/WorkoutBuilder";
 import ViewGames from "./pages/ViewGames";
 import Home from "./pages/Home";
+import Login from "./pages/Login";
+import Signup from "./pages/Signup";
 import Footer from "./components/Footer";
 
 class App extends Component {
@@ -30,6 +32,8 @@ class App extends Component {
         <Router>
           <Switch>
             <Route exact path="/" component={Home}></Route>
+            <Route exact path="/login" component={Login}></Route>
+            <Route exact path="/signup" component={Signup}></Route>
             <Route exact path="/user" component={User}></Route>
             <Route exact path="/games" component={ViewGames}></Route>
             <Route exact path="/workoutbuilder" component={WorkoutBuilder}></Route>

@@ -1,21 +1,38 @@
-
+#workoutPageTitle {
+    background-color: black;
+    opacity: .55;
+    color: white; 
+    text-align: center;
+    font-weight: bold;
+}
 #workoutContainer {
     background: url("./image/StanMusial.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
-    
     height: 100%;
-    color: white;
+}
+
+#inputForm {
+    background-color: black;
+    opacity: .55;
+    color: white; 
+    text-align: center;
+    font-weight: bolder;
+}
+
+#yourWorkouts {
+    background-color: black;
+    opacity: .55;
+    color: white; 
+    text-align: center;
     font-weight: bold;
 }
 
-/* #workoutContainer::before {
-    content: "";
-    position: absolute;
-    top: 0px;
-    right: 0px;
-    bottom: 0px;
-    left: 0px;
-    background-color: rgba(0,0,0,0.4);
-} */
+#recentWorkouts {
+    background-color: black;
+    opacity: .55;
+    color: white; 
+    text-align: center;
+    font-weight: bold;
+}

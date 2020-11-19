@@ -4,7 +4,7 @@ import "./style.css"
 function Footer() {
     return (
         <div>
-            <h6 class="footer">Copyright Benjamin Brumby 2020
+            <h6 className="footer">Copyright Benjamin Brumby 2020
             <br></br>    Isn't baseball great?</h6>
         </div>
     )
