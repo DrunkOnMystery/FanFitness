@@ -1,19 +1,35 @@
 import axios from "axios";
 
 export default {
-    // Gets all exercises
+    // Gets all games for a date
+    getGames: function() {
+      return axios.get("/api/games");
+    },
+    // Gets the games with the given id
+    getGame: function(id) {
+      return axios.get("/api/games/" + id);
+    },
+    // Deletes the games with the given id
+    deleteGames: function(id) {
+      return axios.delete("/api/games/" + id);
+    },
+    // Saves a games to the database
+    saveGames: function(gameData) {
+      return axios.post("/api/games", gameData);
+    },
+
     getExercises: function() {
       return axios.get("/api/exercises");
     },
-    // Gets the exercise with the given id
+    // Gets the book with the given id
     getExercise: function(id) {
       return axios.get("/api/exercises/" + id);
     },
-    // Deletes the exercise with the given id
+    // Deletes the book with the given id
     deleteExercise: function(id) {
       return axios.delete("/api/exercises/" + id);
     },
-    // Saves a exercise to the database
+    // Saves a book to the database
     saveExercise: function(exerciseData) {
       return axios.post("/api/exercises", exerciseData);
     }

@@ -3,20 +3,21 @@ import "./NavStyle.css";
 
 function Nav() {
   return (
-    <div className="Nav">
-      <nav className="top-bar" data-topbar role="navigation">
-      <a href ="/"><h1 id="headerText">FAN FITNESS</h1></a>
-        <section className="top-bar-section">
-          <ul className="right">
-            <li className="navlink"><a className="links" href="/">Home</a></li>
+<div class="top-bar show-for-medium" id="responsive_menu">
+    <div class="top-bar-left">
+        <p id="headerText">FAN FITNESS</p>
+    </div>
+    <div class="top-bar-right">
+        <ul class="medium-horizontal menu">
+        <li className="navlink"><a className="links" href="/">Home</a></li>
             <li className="navlink"><a className="links" href="/login">Signup/Login</a></li>
             <li className="navlink"><a className="links" href="/user">User</a></li>
             <li className="navlink"><a className="links" href="/games">View Games</a></li>
             <li className="navlink"><a className="links" href="/workoutbuilder">Workout Builder</a></li>
-          </ul>
-        </section>
-      </nav>
+        </ul>
     </div>
+
+</div>
   )
 }
 

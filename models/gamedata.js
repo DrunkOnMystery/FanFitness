@@ -97,6 +97,9 @@ const Schema = mongoose.Schema;
       opptripleplays: {
         type: Number, required: true
       },
+      oppRuns: {
+        type: Number, required: true
+      }
 
     });
   

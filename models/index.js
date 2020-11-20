@@ -1,4 +1,6 @@
 module.exports = {
     Exercise: require("./Exercise"),
-    Gamedata: require("./gamedata"),
+    GameData: require("./gamedata"),
+    User: require("./user"),
+    Workout: require("./Workout")
   };

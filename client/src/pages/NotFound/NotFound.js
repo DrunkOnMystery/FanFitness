@@ -6,7 +6,7 @@ function NotFound() {
     return (
         <Container>
             <Cell>
-            <h5>404 DATA NOT FOUND</h5>
+            <h3>404 DATA NOT FOUND</h3>
             </Cell>
         </Container>
     )

@@ -4,7 +4,7 @@ const Router = express.Router();
 
 let exercise = require("../models/Exercise");
 
-Router.route("/create").post((req,res,next) => {
+Router.route("/create").post((req,res) => {
     exercise.create(req.body, (err, data) => {
         if (err) throw err;
         else {
@@ -13,7 +13,7 @@ Router.route("/create").post((req,res,next) => {
     })
 });
 
-Router.route("/").get((req, res) => {
+Router.route("/").get((res) => {
     exercise.find((err, data) => {
         if (err) throw err;
         else {
@@ -22,7 +22,7 @@ Router.route("/").get((req, res) => {
     })
 });
 
-Router.route("/update/:id").put((req, res, next) => {
+Router.route("/update/:id").put((req, res) => {
     exercise.findByIdAndUpdate(req.params.id, {
         $set: req.body 
     }, (err, data) => {
