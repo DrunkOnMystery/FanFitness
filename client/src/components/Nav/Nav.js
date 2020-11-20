@@ -3,12 +3,12 @@ import "./NavStyle.css";
 
 function Nav() {
   return (
-<div class="top-bar show-for-medium" id="responsive_menu">
-    <div class="top-bar-left">
-        <p id="headerText">FAN FITNESS</p>
+<div className="top-bar show-for-medium" id="responsive_menu">
+    <div className="top-bar-left">
+    <a className="links" href="/"> <p id="headerText">FAN FITNESS</p></a>
     </div>
-    <div class="top-bar-right">
-        <ul class="medium-horizontal menu">
+    <div className="top-bar-right">
+        <ul className="medium-horizontal menu">
         <li className="navlink"><a className="links" href="/">Home</a></li>
             <li className="navlink"><a className="links" href="/login">Signup/Login</a></li>
             <li className="navlink"><a className="links" href="/user">User</a></li>

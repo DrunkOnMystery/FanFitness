@@ -66,7 +66,7 @@ function ViewGames() {
                                         <br/>
                                     <p>Clickable links for the stats from that day's games will display in this column</p>
 
-                                    <p>Might mess around and make the exercise numbers display here automatically as well. Maybe with default exercise values?</p>
+                                    <p>The goal is to make each team's name a clickable link, which when clicked, would cause the stats for that team to appear on the opposite column.</p>
 
                                 </div>
                                 <div className="cell medium-4 medium-cell-block-y"></div>

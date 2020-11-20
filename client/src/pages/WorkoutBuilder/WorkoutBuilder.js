@@ -25,12 +25,6 @@ function WorkoutBuilder() {
             .catch(err => console.log(err));
     };
 
-    // function deleteExercise() {
-    //     API.deleteExercise()
-    //         .then(res => loadExercises())
-    //         .catch(err => console.log(err));
-    // };
-
     function handleInputChange(event) {
         const { name, value } = event.target;
         setFormObject({ ...formObject, [name]: value })
@@ -117,6 +111,10 @@ function WorkoutBuilder() {
                                 </div>
                             </div>
                         </div>
+                        <br/>
+                        <br/>
+                        <br/>
+                        <br/>
                         <div class="cell medium-auto medium-cell-block-container">
                             <div class="grid-x grid-padding-x">
                                 <div id="yourWorkouts" class="cell medium-4 medium-cell-block-y">
@@ -154,12 +152,12 @@ function WorkoutBuilder() {
                                 <div class="cell medium-4 medium-cell-block-y"></div>
                                 <div id="recentWorkouts" class="cell medium-4 medium-cell-block-y">
                                     <h5>Workout Requirements For Your Most Recent Game(gameID here)</h5>
-                                    <p className="exercise" id="runs">Runs<h7> runsExercise</h7></p>
+                                    <p className="exercise" id="runs">Runs<h7> * runsExercise = ""</h7></p>
                                     {/* <p className="exercise" id="Exercise2">Singles<h7> multiplied by Reps for your exercise choice</h7></p>
                                     <p className="exercise" id="Exercise3">Doubles<h7> multiplied by Reps for your exercise choice</h7></p>
                                     <p className="exercise" id="Exercise4">Triples<h7> multiplied by Reps for your exercise choice</h7></p> */}
-                                    <p className="exercise" id="homeruns">Homeruns<h7> homerunsExercise</h7></p>
-                                    <p className="exercise" id="strikeouts">Strikeouts<h7> strikeoutsExercise</h7></p>
+                                    <p className="exercise" id="homeruns">Homeruns<h7> * homerunsExercise = ""</h7></p>
+                                    <p className="exercise" id="strikeouts">Strikeouts<h7> * strikeoutsExercise = ""</h7></p>
                                     {/* <p className="exercise" id="Exercise7">Popouts<h7> multiplied by Reps for your exercise choice</h7></p>
                                     <p className="exercise" id="Exercise8">Flyouts<h7> multiplied by Reps for your exercise choice</h7></p>
                                     <p className="exercise" id="Exercise9">Groundouts<h7> multiplied by Reps for your exercise choice</h7></p>
@@ -170,7 +168,7 @@ function WorkoutBuilder() {
                                     {/* <p className="exercise" id="Exercise14">Opp Singles<h7> multiplied by Reps for your exercise choice</h7></p>
                                     <p className="exercise" id="Exercise15">Opp Doubles<h7> multiplied by Reps for your exercise choice</h7></p>
                                     <p className="exercise" id="Exercise16">Opp Triples<h7> multiplied by Reps for your exercise choice</h7></p> */}
-                                    <p className="exercise" id="oppHomeruns">Opp Homeruns<h7> oppHomerunsExercise</h7></p>
+                                    <p className="exercise" id="oppHomeruns">Opp Homeruns<h7> * oppHomerunsExercise = ""</h7></p>
                                     {/* <p className="exercise" id="Exercise18">Opp Walks<h7> multiplied by Reps for your exercise choice</h7></p>
                                     <p className="exercise" id="Exercise19">Opp Hit By Pitch<h7> multiplied by Reps for your exercise choice</h7></p>
                                     <p className="exercise" id="Exercise20">Opp Steals<h7> multiplied by Reps for your exercise choice</h7></p>
@@ -178,11 +176,17 @@ function WorkoutBuilder() {
                                     <p className="exercise" id="Exercise22">Opp Groundouts<h7> multiplied by Reps for your exercise choice</h7></p>
                                     <p className="exercise" id="Exercise23">Opp Lineouts<h7> multiplied by Reps for your exercise choice</h7></p>
                                     <p className="exercise" id="Exercise24">Opp Popouts<h7> multiplied by Reps for your exercise choice</h7></p> */}
-                                    <p className="exercise" id="oppStrikeouts">Opp Strikeouts<h7>oppStrikeoutsExercise</h7></p>
+                                    <p className="exercise" id="oppStrikeouts">Opp Strikeouts<h7> * oppStrikeoutsExercise = ""</h7></p>
                                     {/* <p className="exercise" id="Exercise26">Opp Doubleplays<h7> multiplied by Reps for your exercise choice</h7></p>
                                     <p className="exercise" id="Exercise27">Opp Tripleplays<h7> multiplied by Reps for your exercise choice</h7></p> */}
-                                    <p className="exercise" id="oppRuns">Opp Runs <h7> oppRunsExercise</h7></p>
-
+                                    <p className="exercise" id="oppRuns">Opp Runs <h7> * oppRunsExercise = ""</h7></p>
+                                    <h4>Your total workout = </h4>
+                                <p>"" reps of Exercise 1</p>
+                                <p>"" reps of Exercise 2</p>
+                                <p>"" reps of Exercise 3</p>
+                                <p>"" reps of Exercise 4</p>
+                                <p>"" reps of Exercise 5</p>
+                                <p>"" reps of Exercise 6</p>
                                 </div>
                             </div>
                         </div>
