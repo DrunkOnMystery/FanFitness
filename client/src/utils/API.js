@@ -19,18 +19,18 @@ export default {
     },
 
     getExercises: function() {
-      return axios.get("/api/exercises");
+      return axios.get("/api/exercise");
     },
     // Gets the book with the given id
     getExercise: function(id) {
-      return axios.get("/api/exercises/" + id);
+      return axios.get("/api/exercise/" + id);
     },
     // Deletes the book with the given id
     deleteExercise: function(id) {
-      return axios.delete("/api/exercises/" + id);
+      return axios.delete("/api/exercise/" + id);
     },
     // Saves a book to the database
     saveExercise: function(exerciseData) {
-      return axios.post("/api/exercises", exerciseData);
+      return axios.post("/api/exercise", exerciseData);
     }
   };

@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from "react";
 import "./style.css";
 // import GameData from "../../models/gamedata";
+import Dropdown from "../../components/Dropdown";
 import { Container, Cell } from "../../components/Grid";
 import { Input, TextArea, FormBtn } from "../../components/Form";
 // import DeleteBtn from "../../components/DeleteBtn";
-import { List, ListItem } from "../../components/List";
+// import { List, ListItem } from "../../components/List";
 import API from "../../utils/API";
 // import Exercise from "../../models/Exercise";
 
@@ -23,6 +24,7 @@ function WorkoutBuilder() {
                 setExercises(res.data)
             )
             .catch(err => console.log(err));
+        console.log(exercises);
     };
 
     function handleInputChange(event) {
@@ -32,9 +34,9 @@ function WorkoutBuilder() {
 
     function handleFormSubmit(event) {
         event.preventDefault();
-        if (formObject.name && formObject.defaultCount) {
+        if (formObject.exercise && formObject.defaultCount) {
             API.saveExercise({
-                name: formObject.name,
+                name: formObject.exercise,
                 description: formObject.description,
                 defaultCount: formObject.defaultCount
             })
@@ -64,40 +66,42 @@ function WorkoutBuilder() {
     // let oppStrikeoutsExercise = (oppStrikeouts * 5)
 
 
+
+
     return (
         <Container>
             <div id="workoutContainer">
                 <Cell>
-                    <div class="cell medium-6">
+                    <div className="cell medium-6">
                         <h5 id="workoutPageTitle">Workout Builder Page</h5>
                     </div>
                 </Cell>
                 <Cell>
-                    <div class="grid-y medium-grid-frame">
-                        <div class="cell shrink header medium-cell-block-container">
-                            <div class="grid-x grid-padding-x">
-                            <div class="cell medium-3">
+                    <div className="grid-y medium-grid-frame">
+                        <div className="cell shrink header medium-cell-block-container">
+                            <div className="grid-x grid-padding-x">
+                                <div className="cell medium-3">
                                 </div>
-                                <div class="cell medium-6">
+                                <div className="cell medium-6">
                                     <form id="inputForm">
                                         <Input
                                             onChange={handleInputChange}
                                             name="exercise"
                                             placeholder="Exercise Name (Required)"
-                                            value={formObject.name}
+                                        // value={formObject.name}
                                         />
                                         <Input
                                             onChange={handleInputChange}
                                             name="defaultCount"
                                             placeholder="Reps (Required)"
-                                            value={formObject.defaultCount}
+                                        // value={formObject.defaultCount}
                                         />
                                         <TextArea
 
                                             onChange={handleInputChange}
                                             name="description"
                                             placeholder="Describe the exercise (Optional)"
-                                            value={formObject.description}
+                                        // value={formObject.description}
                                         />
                                         <FormBtn
 
@@ -107,22 +111,137 @@ function WorkoutBuilder() {
                                         </FormBtn>
                                     </form>
                                 </div>
-                                <div class="cell medium-3">
+                                <div className="cell medium-3">
                                 </div>
                             </div>
                         </div>
-                        <br/>
-                        <br/>
-                        <br/>
-                        <br/>
-                        <div class="cell medium-auto medium-cell-block-container">
-                            <div class="grid-x grid-padding-x">
-                                <div id="yourWorkouts" class="cell medium-4 medium-cell-block-y">
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <div className="cell medium-auto medium-cell-block-container">
+                            <div className="grid-x grid-padding-x">
+                                <div id="yourWorkouts" className="cell medium-4 medium-cell-block-y">
                                     <h5>Your Workouts</h5>
                                     <p>Add exercises to create your own workout here.</p>
+                                    {exercises.length ? (
+                                        <ul className="vertical menu accordion-menu" data-accordion-menu>
+                                            <li>
+                                                <a href="#">Select Exercise #1</a>
+                                                <ul className="menu vertical nested">
+                                                    {exercises.map(exercise => {
+                                                        return (
+                                                            <li key={exercise._name}>
+                                                                <a href={"/exercises/ + exercise._name"}>
+                                                                    <strong>{exercise.name}
+                                                                    </strong>
+                                                                </a>
+                                                            </li>
+                                                        )
+                                                    })}
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a href="#">Select Exercise #2</a>
+                                                <ul className="menu vertical nested">
+                                                    {exercises.map(exercise => {
+                                                        return (
+                                                            <li key={exercise._name}>
+                                                                <a href={"/exercises/ + exercise._name"}>
+                                                                    <strong>{exercise.name}
+                                                                    </strong>
+                                                                </a>
+                                                            </li>
+                                                        )
+                                                    })}
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a href="#">Select Exercise #3</a>
+                                                <ul className="menu vertical nested">
+                                                    {exercises.map(exercise => {
+                                                        return (
+                                                            <li key={exercise._name}>
+                                                                <a href={"/exercises/ + exercise._name"}>
+                                                                    <strong>{exercise.name}
+                                                                    </strong>
+                                                                </a>
+                                                            </li>
+                                                        )
+                                                    })}
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a href="#">Select Exercise #4</a>
+                                                <ul className="menu vertical nested">
+                                                    {exercises.map(exercise => {
+                                                        return (
+                                                            <li key={exercise._name}>
+                                                                <a href={"/exercises/ + exercise._name"}>
+                                                                    <strong>{exercise.name}
+                                                                    </strong>
+                                                                </a>
+                                                            </li>
+                                                        )
+                                                    })}
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a href="#">Select Exercise #5</a>
+                                                <ul className="menu vertical nested">
+                                                    {exercises.map(exercise => {
+                                                        return (
+                                                            <li key={exercise._name}>
+                                                                <a href={"/exercises/ + exercise._name"}>
+                                                                    <strong>{exercise.name}
+                                                                    </strong>
+                                                                </a>
+                                                            </li>
+                                                        )
+                                                    })}
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a href="#">Select Exercise #6</a>
+                                                <ul className="menu vertical nested">
+                                                    {exercises.map(exercise => {
+                                                        return (
+                                                            <li key={exercise._name}>
+                                                                <a href={"/exercises/ + exercise._name"}>
+                                                                    <strong>{exercise.name}
+                                                                    </strong>
+                                                                </a>
+                                                            </li>
+                                                        )
+                                                    })}
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    ) : (
+                                        <h3> No Results To Display </h3>
+                                    )}
 
-                                    <p>Exercises for your custom workout will display here.</p>
-                                    <List>
+                                    {/* {exercises.length ? (
+                                            <ul className="dropdown" data-dropdown-menu>
+                                                <li>
+                                                    <a href="#">Select Your Exercise</a>
+                                                    <ul className="menu">
+                                                        {exercises.map(exercise => {
+                                                        return (
+                                                        <li key={exercise._name}>
+                                                        <a href={"/exercises/ + exercise._name"}>
+                                                            <strong> {exercise.name}
+                                                            </strong>
+                                                        </a>
+                                                    </li>
+                                                )
+                                            })}
+                                            </ul>
+                                    </ul>
+                                        ) : (
+                                            <h3> No results </h3>
+                                        )} */}
+                                    {/* <List>
                                         <ListItem>
                                             User Choice Exercise One.
                                         </ListItem>
@@ -147,46 +266,46 @@ function WorkoutBuilder() {
                                         User Choice Exercise Six.
                                         </ListItem>
                                         <br/>
-                                    </List>
+                                    </List> */}
                                 </div>
-                                <div class="cell medium-4 medium-cell-block-y"></div>
-                                <div id="recentWorkouts" class="cell medium-4 medium-cell-block-y">
+                                <div className="cell medium-4 medium-cell-block-y"></div>
+                                <div id="recentWorkouts" className="cell medium-4 medium-cell-block-y">
                                     <h5>Workout Requirements For Your Most Recent Game(gameID here)</h5>
-                                    <p className="exercise" id="runs">Runs<h7> * runsExercise = ""</h7></p>
-                                    {/* <p className="exercise" id="Exercise2">Singles<h7> multiplied by Reps for your exercise choice</h7></p>
-                                    <p className="exercise" id="Exercise3">Doubles<h7> multiplied by Reps for your exercise choice</h7></p>
-                                    <p className="exercise" id="Exercise4">Triples<h7> multiplied by Reps for your exercise choice</h7></p> */}
-                                    <p className="exercise" id="homeruns">Homeruns<h7> * homerunsExercise = ""</h7></p>
-                                    <p className="exercise" id="strikeouts">Strikeouts<h7> * strikeoutsExercise = ""</h7></p>
-                                    {/* <p className="exercise" id="Exercise7">Popouts<h7> multiplied by Reps for your exercise choice</h7></p>
-                                    <p className="exercise" id="Exercise8">Flyouts<h7> multiplied by Reps for your exercise choice</h7></p>
-                                    <p className="exercise" id="Exercise9">Groundouts<h7> multiplied by Reps for your exercise choice</h7></p>
-                                    <p className="exercise" id="Exercise10">Steals<h7> multiplied by Reps for your exercise choice</h7></p>
-                                    <p className="exercise" id="Exercise11">Walks<h7> multiplied by Reps for your exercise choice</h7></p>
-                                    <p className="exercise" id="Exercise12">Doubleplays<h7> multiplied by Reps for your exercise choice</h7></p>
-                                    <p className="exercise" id="Exercise13">Tripleplays<h7> multiplied by Reps for your exercise choice</h7></p> */}
-                                    {/* <p className="exercise" id="Exercise14">Opp Singles<h7> multiplied by Reps for your exercise choice</h7></p>
-                                    <p className="exercise" id="Exercise15">Opp Doubles<h7> multiplied by Reps for your exercise choice</h7></p>
-                                    <p className="exercise" id="Exercise16">Opp Triples<h7> multiplied by Reps for your exercise choice</h7></p> */}
-                                    <p className="exercise" id="oppHomeruns">Opp Homeruns<h7> * oppHomerunsExercise = ""</h7></p>
-                                    {/* <p className="exercise" id="Exercise18">Opp Walks<h7> multiplied by Reps for your exercise choice</h7></p>
-                                    <p className="exercise" id="Exercise19">Opp Hit By Pitch<h7> multiplied by Reps for your exercise choice</h7></p>
-                                    <p className="exercise" id="Exercise20">Opp Steals<h7> multiplied by Reps for your exercise choice</h7></p>
-                                    <p className="exercise" id="Exercise21">Opp Flyouts<h7> multiplied by Reps for your exercise choice</h7></p>
-                                    <p className="exercise" id="Exercise22">Opp Groundouts<h7> multiplied by Reps for your exercise choice</h7></p>
-                                    <p className="exercise" id="Exercise23">Opp Lineouts<h7> multiplied by Reps for your exercise choice</h7></p>
-                                    <p className="exercise" id="Exercise24">Opp Popouts<h7> multiplied by Reps for your exercise choice</h7></p> */}
-                                    <p className="exercise" id="oppStrikeouts">Opp Strikeouts<h7> * oppStrikeoutsExercise = ""</h7></p>
-                                    {/* <p className="exercise" id="Exercise26">Opp Doubleplays<h7> multiplied by Reps for your exercise choice</h7></p>
-                                    <p className="exercise" id="Exercise27">Opp Tripleplays<h7> multiplied by Reps for your exercise choice</h7></p> */}
-                                    <p className="exercise" id="oppRuns">Opp Runs <h7> * oppRunsExercise = ""</h7></p>
+                                    <p className="exercise" id="runs">Runs* runsExercise = ""</p>
+                                    {/* <p className="exercise" id="Exercise2">Singles multiplied by Reps for your exercise choice</p>
+                                    <p className="exercise" id="Exercise3">Doubles multiplied by Reps for your exercise choice</p>
+                                    <p className="exercise" id="Exercise4">Triples multiplied by Reps for your exercise choice</p> */}
+                                    <p className="exercise" id="homeruns">Homeruns * homerunsExercise = ""</p>
+                                    <p className="exercise" id="strikeouts">Strikeouts * strikeoutsExercise = ""</p>
+                                    {/* <p className="exercise" id="Exercise7">Popouts multiplied by Reps for your exercise choice</p>
+                                    <p className="exercise" id="Exercise8">Flyouts multiplied by Reps for your exercise choice</p>
+                                    <p className="exercise" id="Exercise9">Groundouts multiplied by Reps for your exercise choice</p>
+                                    <p className="exercise" id="Exercise10">Steals multiplied by Reps for your exercise choice</p>
+                                    <p className="exercise" id="Exercise11">Walks multiplied by Reps for your exercise choice</p>
+                                    <p className="exercise" id="Exercise12">Doubleplays multiplied by Reps for your exercise choice</p>
+                                    <p className="exercise" id="Exercise13">Tripleplays multiplied by Reps for your exercise choice</p> */}
+                                    {/* <p className="exercise" id="Exercise14">Opp Singles multiplied by Reps for your exercise choice</p>
+                                    <p className="exercise" id="Exercise15">Opp Doubles multiplied by Reps for your exercise choice</p>
+                                    <p className="exercise" id="Exercise16">Opp Triples multiplied by Reps for your exercise choice</p> */}
+                                    <p className="exercise" id="oppHomeruns">Opp Homeruns * oppHomerunsExercise = ""</p>
+                                    {/* <p className="exercise" id="Exercise18">Opp Walks multiplied by Reps for your exercise choice</p>
+                                    <p className="exercise" id="Exercise19">Opp Hit By Pitch multiplied by Reps for your exercise choice</p>
+                                    <p className="exercise" id="Exercise20">Opp Steals multiplied by Reps for your exercise choice</p>
+                                    <p className="exercise" id="Exercise21">Opp Flyouts multiplied by Reps for your exercise choice</p>
+                                    <p className="exercise" id="Exercise22">Opp Groundouts multiplied by Reps for your exercise choice</p>
+                                    <p className="exercise" id="Exercise23">Opp Lineouts multiplied by Reps for your exercise choice</p>
+                                    <p className="exercise" id="Exercise24">Opp Popouts multiplied by Reps for your exercise choice</p> */}
+                                    <p className="exercise" id="oppStrikeouts">Opp Strikeouts * oppStrikeoutsExercise = ""</p>
+                                    {/* <p className="exercise" id="Exercise26">Opp Doubleplays multiplied by Reps for your exercise choice</p>
+                                    <p className="exercise" id="Exercise27">Opp Tripleplays multiplied by Reps for your exercise choice</p> */}
+                                    <p className="exercise" id="oppRuns">Opp Runs * oppRunsExercise = ""</p>
                                     <h4>Your total workout = </h4>
-                                <p>"" reps of Exercise 1</p>
-                                <p>"" reps of Exercise 2</p>
-                                <p>"" reps of Exercise 3</p>
-                                <p>"" reps of Exercise 4</p>
-                                <p>"" reps of Exercise 5</p>
-                                <p>"" reps of Exercise 6</p>
+                                    <p>"" reps of Exercise 1</p>
+                                    <p>"" reps of Exercise 2</p>
+                                    <p>"" reps of Exercise 3</p>
+                                    <p>"" reps of Exercise 4</p>
+                                    <p>"" reps of Exercise 5</p>
+                                    <p>"" reps of Exercise 6</p>
                                 </div>
                             </div>
                         </div>

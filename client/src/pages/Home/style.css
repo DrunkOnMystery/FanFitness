@@ -20,22 +20,3 @@
    text-align: center;
    font-weight: bolder;
 }
-
-.callout {
-    background-color: black;
-    opacity: .55;
-    color: white; 
-    text-align: center;
-    font-weight: bolder;
-    width: 35%;
-    margin-top: 30px;
-    margin-bottom: 30px;
-}
-
-.right {
-    margin-left: 60%;
-}
-
-.left {
-    margin-right: 60%;
-}

@@ -105,3 +105,7 @@ dist
 
 #ENV file
 .env
+.cache
+node_modules
+public
+.env*
