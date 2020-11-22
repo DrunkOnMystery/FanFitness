@@ -1,9 +1,9 @@
 #workoutPageTitle {
     background-color: black;
-    opacity: .55;
+    opacity: .65;
     color: white; 
     text-align: center;
-    font-weight: bold;
+    font-weight: bolder;
 }
 #workoutContainer {
     background: url("./image/StanMusial.jpg");
@@ -22,18 +22,18 @@
 
 #yourWorkouts {
     background-color: black;
-    opacity: .55;
+    opacity: .65;
     color: white; 
     text-align: center;
-    font-weight: bold;
+    font-weight: bolder;
 }
 
 #recentWorkouts {
     background-color: black;
-    opacity: .55;
+    opacity: .65;
     color: white; 
     text-align: center;
-    font-weight: bold;
+    font-weight: bolder;
 }
 
 .exercise {

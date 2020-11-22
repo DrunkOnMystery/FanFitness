@@ -10,8 +10,8 @@ function Nav() {
     <div className="top-bar-right">
         <ul className="medium-horizontal menu">
         <li className="navlink"><a className="links" href="/">Home</a></li>
-            <li className="navlink"><a className="links" href="/login">Signup/Login</a></li>
-            <li className="navlink"><a className="links" href="/user">User</a></li>
+            {/* <li className="navlink"><a className="links" href="/login">Signup/Login</a></li>
+            <li className="navlink"><a className="links" href="/user">User</a></li> */}
             <li className="navlink"><a className="links" href="/games">View Games</a></li>
             <li className="navlink"><a className="links" href="/workoutbuilder">Workout Builder</a></li>
         </ul>

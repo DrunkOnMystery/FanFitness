@@ -7,11 +7,11 @@ export default {
     },
     // Gets the games with the given id
     getGame: function(id) {
-      return axios.get("/api/games/" + id);
+      return axios.get("/api/games" + id);
     },
     // Deletes the games with the given id
     deleteGames: function(id) {
-      return axios.delete("/api/games/" + id);
+      return axios.delete("/api/games" + id);
     },
     // Saves a games to the database
     saveGames: function(gameData) {
@@ -23,11 +23,11 @@ export default {
     },
     // Gets the book with the given id
     getExercise: function(id) {
-      return axios.get("/api/exercise/" + id);
+      return axios.get("/api/exercise" + id);
     },
     // Deletes the book with the given id
     deleteExercise: function(id) {
-      return axios.delete("/api/exercise/" + id);
+      return axios.delete("/api/exercise" + id);
     },
     // Saves a book to the database
     saveExercise: function(exerciseData) {
