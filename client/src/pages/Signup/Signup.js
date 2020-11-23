@@ -2,6 +2,8 @@ import React from "react";
 import "./style.css"
 import { Container } from "../../components/Grid";
 
+
+//Function to return the signup page
 function Signup() {
     return (
         <Container>

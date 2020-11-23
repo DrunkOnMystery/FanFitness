@@ -2,28 +2,32 @@ import React, { useEffect, useState } from "react";
 import "./style.css";
 import { Container, Cell } from "../../components/Grid";
 import { Input, TextArea, FormBtn } from "../../components/Form";
-// import DeleteBtn from "../../components/DeleteBtn";
-// import { List, ListItem } from "../../components/List";
 import API from "../../utils/API";
 
+//function for the WorkoutBuilder page
 function WorkoutBuilder() {
 
+    //Set constants for the state effect
     const [exercises, setExercises] = useState([])
-    const [games, setGames] = useState("game");
     const [formObject, setFormObject] = useState({})
 
+    //set useEffect
     useEffect(() => {
         loadExercises();
-        loadGames();
     }, [])
+
+    const userExercises = [];
 
     function loadExercises() {
         API.getExercises()
             .then(res =>
+                userExercises.push(res.data));
+        API.getExercises()
+                .then(res =>
                 setExercises(res.data)
             )
             .catch(err => console.log(err));
-        console.log(exercises);
+        console.log(userExercises);
     };
 
     function handleInputChange(event) {
@@ -47,35 +51,7 @@ function WorkoutBuilder() {
                 .then(res => loadExercises())
                 .catch(err => console.log(err))
         }
-        loadExercises();
-        loadGames();
     };
-
-    function loadGames() {
-        API.getGame("5fb9a76677ac065a0c79a844")
-            .then(res =>
-                setGames(res.data)
-            )
-            .catch(err => console.log(err));
-        console.log(games);}
-
-
-    // let runs = GameData.runs;
-    // let homeruns = GameData.homeruns;
-    // let strikeouts = Gamedata.strikeouts;
-    // let oppRuns = Gamedata.oppRuns;
-    // let oppHomeruns = Gamedata.oppHomeruns;
-    // let oppStrikeouts = Gamedata.oppStrikeouts;
-
-
-    // let runsExercise = (runs * 5)
-    //  let homerunsExercise = (homeruns * 5)
-    // let strikeoutsExercise = (strikeouts * 5)
-    // let oppRunsExercise = (oppRuns * 5)
-    // let oppHomerunsExercise = (oppHomeruns * 5)
-    // let oppStrikeoutsExercise = (oppStrikeouts * 5)
-
-
 
     return (
         <Container>
@@ -97,20 +73,17 @@ function WorkoutBuilder() {
                                             onChange={handleInputChange}
                                             name="exercise"
                                             placeholder="Exercise Name (Required)"
-                                        // value={formObject.name}
                                         />
                                         <Input
                                             onChange={handleInputChange}
                                             name="defaultCount"
                                             placeholder="Reps (Required)"
-                                        // value={formObject.defaultCount}
                                         />
                                         <TextArea
 
                                             onChange={handleInputChange}
                                             name="description"
                                             placeholder="Describe the exercise (Optional)"
-                                        // value={formObject.description}
                                         />
                                         <FormBtn
 
@@ -137,18 +110,15 @@ function WorkoutBuilder() {
                                     {exercises.length ? (
                                         <ul className="vertical menu accordion-menu" data-accordion-menu>
                                             <li>
-                                                <p>Select Your Exercise:</p>
+                                                <p>Current Exercises In The Database:</p>
                                                 <ul className="menu simple">
                                                     {exercises.map(exercise => {
                                                         return (
                                                             <li key={exercise._name}>
                                                                 <h5>
-                                                                <a href={"/exercises/ + exercise._name"}>
+                                                                {exercise.name}
+                                                                    
                                                                     <br/>
-                                                                    <strong>{exercise.name}
-                                                                    </strong>
-                                                                    <br/>
-                                                                </a>
                                                                 </h5>
                                                             </li>
                                                         )})}
@@ -158,49 +128,31 @@ function WorkoutBuilder() {
                                     ) : (
                                         <h5> NOTHING TO DISPLAY</h5>
                                     )}
-                                                        
+                                    <h5>Your current selections are:</h5>
+                                    <div id="yourExercises">
+                                    <h5><strong>Exercise 1: Squats</strong></h5>
+                                    <h5><strong>Exercise 2: Jumping Jacks</strong></h5>
+                                    <h5><strong>Exercise 3: Pushups</strong></h5>
+                                    </div>                
                                 </div>
                                 <div className="cell medium-4 medium-cell-block-y"></div>
                                 <div id="recentWorkouts" className="cell medium-4 medium-cell-block-y">
 
-                                    <h5>Workout Requirements For Your Most Recent Game:</h5>
-                                    {exercises.length ? (
-                                        <ul className="vertical menu accordion-menu" data-accordion-menu>
-                                            <li>
-                                                <p>Select Your Exercise:</p>
-                                                <ul className="menu simple">
-                                                    {exercises.map(exercise => {
-                                                        return (
-                                                            <li key={exercise._name}>
-                                                                <a href={"/exercises/ + exercise._name"}>
-                                                                    <br/>
-                                                                    <strong>{exercise.name}
-                                                                    </strong>
-                                                                    <br/>
-                                                                </a>
-                                                            </li>
-                                                        )})}
-                                                </ul>
-                                            </li>
-                                        </ul>        
-                                    ) : (
-                                        <h5> NOTHING TO DISPLAY</h5>
-                                    )}
+                                    <h4>Workout Requirements For The Chosen Game:</h4>
+                                        <p>Team: Atlanta Braves</p>
+                                        <p>Game Date: SEP 24, 2020</p>
+                                        <p>Team Runs: 2 = -10 squats </p>
+                                        <p>Team Homeruns: 0 = 0 jumping jacks</p>
+                                        <p>Opp. Strikeouts: 6 = -15 pushups</p>
+                                        <p>Opp. Homeruns: 30 jumping jacks </p>
+                                        <p>Opp. Runs: 4 = 40 squats</p>
+                                        <p>Strikeouts: 13 = 65 pushups</p>
 
-                                    <p className="exercise" id="runs">Runs* runsExercise = ""</p>
-                                    <p className="exercise" id="homeruns">Homeruns * homerunsExercise = ""</p>
-                                    <p className="exercise" id="strikeouts">Strikeouts * strikeoutsExercise = ""</p>
-                                    <p className="exercise" id="oppHomeruns">Opp Homeruns * oppHomerunsExercise = ""</p>
-                                    <p className="exercise" id="oppStrikeouts">Opp Strikeouts * oppStrikeoutsExercise = ""</p>
-                                    <p className="exercise" id="oppRuns">Opp Runs * oppRunsExercise = ""</p>
-                                    <h4>Your total workout = </h4>
-                                    <p>"" reps of Exercise 1</p>
-                                    <p>"" reps of Exercise 2</p>
-                                    <p>"" reps of Exercise 3</p>
-                                    <p>"" reps of Exercise 4</p>
-                                    <p>"" reps of Exercise 5</p>
-                                    <p>"" reps of Exercise 6</p>
+                                        <h6>Your workout for the Atlanta Braves game on SEP 24, 2020 is: </h6>
+                                        <p>30 squats, 30 jumping jacks, and 50 pushups.</p>
+
                                 </div>
+                                <div id="exerciseDisplay"></div>
                             </div>
                         </div>
                     </div>

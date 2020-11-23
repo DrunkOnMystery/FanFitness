@@ -2,6 +2,7 @@ import React from "react";
 import "./style.css"
 import { Container } from "../../components/Grid";
 
+//Function to return the Login page 
 function Login() {
     return (
         <Container>

@@ -3,19 +3,21 @@ import "./style.css"
 import API from "../../utils/API"
 import { Container, Cell } from "../../components/Grid";
 import { Input, FormBtn } from "../../components/Form";
-// import { List, ListItem } from "../../components/List";
-// import DeleteBtn from "../../components/DeleteBtn";
 
+
+//Function for the ViewGames page
 function ViewGames() {
 
+    //set state constants
     const [games, setGames] = useState([])
     const [formObject, setFormObject] = useState({})
 
-
+//set use effect
     useEffect(() => {
         loadGames()
     }, [])
 
+    //load games from the games database
     function loadGames() {
         API.getGames()
             .then(res =>
@@ -66,13 +68,11 @@ function ViewGames() {
                         <div className="cell shrink header medium-cell-block-container">
                             <div className="grid-x grid-padding-x">
                                 <div className="cell medium-2">
-                                    {/* A medium 2 cell */}
                                 </div>
                                 <div id="vgTitle" className="cell medium-8 medium-cell-block">
                                     <h2>Select The Games For Your Workouts</h2>
                                 </div>
                                 <div className="cell medium-2">
-                                    {/* A medium 2 cell */}
                                 </div>
                             </div>
                         </div>
@@ -98,11 +98,7 @@ function ViewGames() {
                                     <br />
                                     <br />
                                     <p>Clickable links for the stats from that day's games will display in this column</p>
-
                                     <p>The goal is to make each team's name a clickable link, which when clicked, would cause the stats for that team to appear on the opposite column.</p>
-
-
-
                                 </div>
                                 <div className="cell medium-4 medium-cell-block-y"></div>
                                 <div id="right-column" className="cell medium-4 medium-cell-block-y">
@@ -112,7 +108,7 @@ function ViewGames() {
                                             <ul className="vertical menu gamesDisplay">
                                                 {games.map(game => {
                                                     return(
-                                                        <li key={game._teamname}>
+                                                        <li key={game.gamedate}>
                                                             <a href={"/games/ + game._teamname"}>
                                                                 <strong>{game.teamname} {game.runs}-{game.OppRuns}
                                                                 </strong>

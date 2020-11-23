@@ -1,6 +1,6 @@
 import React from "react";
 
-// This Row component lets us use a bootstrap row without having to think about class names
+// This Cell component is Foundation's version of Bootstrap's Rows and Columns. This allows the children to be passed down.
 export function Cell({ fluid, children }) {
   return <div className={`row${fluid ? "-fluid" : ""}`}>{children}</div>;
 }

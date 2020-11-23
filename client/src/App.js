@@ -11,7 +11,7 @@ import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import Footer from "./components/Footer";
 
-
+//The render function, including all the various routes for the different pages.
 class App extends Component {
 
   render() {

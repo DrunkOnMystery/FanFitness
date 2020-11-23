@@ -4,6 +4,7 @@ import Panel from "../../components/Panel";
 import Panel2 from "../../components/Panel2";
 import { Container, Cell } from "../../components/Grid";
 
+//Function for the creating the primary home page, using Panel components and a background image
 function Home() {
     return (
         <Container>
@@ -12,7 +13,7 @@ function Home() {
                     <div className="cell shrink header medium-cell-block-container">
                         <div className="grid-x grid-padding-x">
                             <div className="cell medium-2">
-                                {/* A medium 2 cell */}
+
                             </div>
                             <div id="welcome" className="cell medium-6 medium-cell-block center">
                                 <h3>Welcome to Fan Fitness</h3>
@@ -20,7 +21,7 @@ function Home() {
 
                             </div>
                             <div className="cell medium-2">
-                                {/* A medium 2 cell */}
+
                             </div>
 
                         </div>

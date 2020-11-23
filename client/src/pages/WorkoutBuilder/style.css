@@ -39,3 +39,9 @@
 .exercise {
     text-align: left;
 }
+
+#yourExercises {
+    text-align: left;
+    padding-left: 40px;
+    font-weight: bolder;
+}

@@ -1,5 +1,7 @@
 const db = require("../models");
 
+
+//controller for calls to the Exercises database
 module.exports = {
     findAll: function(req, res) {
       db.Exercise

@@ -1,5 +1,7 @@
 const db = require("../models");
 
+
+//Controller for calls to the games database
 module.exports = {
     findAll: function(req, res) {
       db.GameData
