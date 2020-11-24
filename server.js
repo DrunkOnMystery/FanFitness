@@ -24,8 +24,16 @@ app.get("*", function(req, res) {
 });
 
 // Connect to the Mongo DB
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/exercises");
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/games");
+
+mongoose.connect(
+  process.env.MONGODB_URI || 'mongodb://localhost/exercises',
+  {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    useCreateIndex: true,
+    useFindAndModify: false
+  }
+);
 
 app.listen(PORT, function() {
   console.log(`🌎 ==> API server now on port ${PORT}!`);
